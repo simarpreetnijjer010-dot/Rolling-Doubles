@@ -1,0 +1,26 @@
+public class rollDoubles {
+    public static void main(String args[]) {
+        new rollDoubles();
+    }
+
+    public rollDoubles() {
+        System.out.println("How many rolls until you get doubles?");
+
+        int gem1 = (int)(Math.random() * 6) + 1;
+        int gem2 = (int)(Math.random() * 6) + 1;
+        int tries = 1;
+
+        System.out.println("Roll #" + tries + ": " + gem1 + ", " + gem2);
+
+        // roll till double comes
+        while (gem1 != gem2) {
+            gem1 = (int)(Math.random() * 6) + 1;
+            gem2 = (int)(Math.random() * 6) + 1;
+            tries++;
+            System.out.println("Roll #" + tries + ": " + gem1 + ", " + gem2);
+        }
+
+        System.out.println("You got it in " + tries + " rolls!");
+    }
+}
+
